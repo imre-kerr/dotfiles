@@ -1,0 +1,16 @@
+[GENERAL]
+delay=0
+filename[$e]=file://$HOME/Pictures/snapshot2.png
+includeDecorations=true
+includePointer=false
+mode=2
+
+[KFileDialog Settings]
+Height 2160=1063
+Recent Files[$e]=$HOME/Pictures/snapshot1.png,$HOME/Pictures/snapshot1.png
+Recent URLs[$e]=$HOME/Pictures/
+Width 3840=1920
+
+[MainWindow]
+Height 2160=499
+Width 3840=487

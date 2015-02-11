@@ -1,0 +1,41 @@
+[$Version]
+update_info=amarok.upd:1
+
+[Collection Browser]
+View Mode=NormalCollections
+
+[Collection Folders]
+3=./imrefran/Music
+
+[General]
+First Run=false
+
+[General Options]
+PlayFirstRunJingle=false
+
+[MainWindow]
+Height 2160=559
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAn8AAAB8vwBAAAAA/sAAAAkAE0AZQBkAGkAYQAgAFMAbwB1AHIAYwBlAHMAIABkAG8AYwBrAQAAAAAAAAIoAAAAzgEAAAX7AAAAGABDAG8AbgB0AGUAeAB0ACAAZABvAGMAawEAAAIrAAAFpgAAAZYBAAAF+wAAABoAUABsAGEAeQBsAGkAcwB0ACAAZABvAGMAawEAAAfUAAACKAAAAM4BAAAFAAAAAAAAAfIAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAgAAABYATQBhAGkAbgBUAG8AbwBsAGIAYQByAQAAAAD/////AAAAAAAAAAAAAAAYAFMAbABpAG0AIABUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 3840=2556
+
+[Playlist Search]
+MatchAlbum=true
+MatchArtist=true
+MatchTrack=true
+
+[Podcast View]
+Merged View=false
+
+[Saved Playlists View]
+Merged View=false
+
+[ScriptManager]
+LastUpdateCheck=1423490128
+
+[StatSyncing]
+checkedFields=rating,firstplay,lastplay,playcount,label
+excludedLabels=
+providerEnabledStatuses=true
+providerIds=localCollection
+providerNames=Local Collection

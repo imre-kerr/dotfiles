@@ -1,0 +1,22 @@
+[1]
+Active=1
+Sessions=1
+
+[Number]
+NumberOfSessions=1
+NumberOfWindows=1
+
+[Session1]
+Encoding=UTF-8
+LocalTab=%d : %n
+Profile[$e]=/usr/share/kde4/apps/konsole/Shell.profile
+RemoteTab=(%u) %H
+SessionGuid={bf910632-6f4c-4000-bfde-044b72774d26}
+WorkingDir[$e]=$HOME
+
+[WindowProperties1]
+ClassName=Konsole::MainWindow
+Height 2160=1392
+ObjectName=MainWindow#1
+State=AAAA/wAAAAD9AAAAAAAAA4cAAAVwAAAABAAAAAQAAAAIAAAACPwAAAAA
+Width 3840=903

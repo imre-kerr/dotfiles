@@ -1,0 +1,7 @@
+[$Version]
+update_info=oxygen.upd:1
+
+[Style]
+ScrollBarAddLineButtons=0
+ScrollBarSubLineButtons=0
+ScrollBarWidth=10

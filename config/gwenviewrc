@@ -1,0 +1,31 @@
+[MainWindow]
+Height 2160=500
+State=AAAA/wAAAAD9AAAAAAAAA5kAAAHWAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 3840=921
+
+[Print]
+PrintHeight=15
+
+[Recent Files]
+File1[$e]=$HOME/Pictures/1420643339116.jpg
+File2[$e]=$HOME/output/00000128.jpg
+File3[$e]=$HOME/output/00000173.jpg
+File4[$e]=$HOME/optimised.gif
+File5[$e]=$HOME/nettside-hpc-lab/img/group_photos/IEEEextreme-2014-10-18 22.29.29.jpg
+File6[$e]=$HOME/nettside-hpc-lab/img/group_photos/hpc-lab-fall2013-IMG_6672.jpg
+File7[$e]=$HOME/Pictures/merchant_final.png
+File8[$e]=$HOME/nettside-hpc-lab/img/group_photos/nc1.jpg
+File9[$e]=$HOME/Pictures/7e7.jpg
+Name1[$e]=1420643339116.jpg
+Name2[$e]=00000128.jpg
+Name3[$e]=00000173.jpg
+Name4[$e]=optimised.gif
+Name5[$e]=IEEEextreme-2014-10-18 22.29.29.jpg
+Name6[$e]=hpc-lab-fall2013-IMG_6672.jpg
+Name7[$e]=merchant_final.png
+Name8[$e]=nc1.jpg
+Name9[$e]=7e7.jpg
+
+[SideBar-ViewMode]
+IsVisible=true

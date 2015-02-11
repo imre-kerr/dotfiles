@@ -1,0 +1,13 @@
+[DownloadDialog Settings]
+Height 2160=400
+Width 3840=700
+
+[MainWindow]
+Height 2160=1661
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABKEAAAZfAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 3840=1185
+
+[Notification Messages]
+FontSettingsChanged=false
