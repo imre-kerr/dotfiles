@@ -90,3 +90,24 @@ export VIRTUALENV_PYTHON=/usr/bin/python
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+# Go stuff
+export GOPATH=$HOME/code/go
+export GOBIN=$GOPATH/bin
+PATH=$GOBIN:$PATH
+export PATH
+
+# NSB stuff
+export NSB_HOME=$HOME/code/nsb
+export NSB_AWS_USERNAME=imre
+export NSB_SCRIPT_DIR=$NSB_HOME/prm-scripts
+export NSB_SSH_CONFIG_DIR="/home/imre/code/nsb/prm-infrastructure/ssh_config"
+export PASSWORD_STORE_DIR=$NSB_HOME/.password-store-prm
+export KEYNAME="$(gpg -K --with-colons | grep ^sec | cut -d: -f5)"
+eval "$($NSB_HOME/prm-scripts/bin/nsb init -)"
+
+function cdn() {
+    cd ${NSB_HOME}/${1}
+}
+
+export GPG_TTY=$(tty)
