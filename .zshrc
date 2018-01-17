@@ -111,3 +111,9 @@ function cdn() {
 }
 
 export GPG_TTY=$(tty)
+
+# added by travis gem
+[ -f /home/imre/.travis/travis.sh ] && source /home/imre/.travis/travis.sh
+
+eval "$(rbenv init -)"
+
