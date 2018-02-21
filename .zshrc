@@ -117,3 +117,5 @@ export GPG_TTY=$(tty)
 
 eval "$(rbenv init -)"
 
+alias cim="git commit -a -t <(git rev-parse --abbrev-ref HEAD | cut -d_ -f1 | sed 's/$/: /') && git push"
+alias ci="git commit -a -t <(git rev-parse --abbrev-ref HEAD | cut -d_ -f1 | sed 's/$/: /')"
