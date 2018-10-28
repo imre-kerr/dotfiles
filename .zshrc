@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/imre/.oh-my-zsh
+export ZSH=/home/imre/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -104,7 +104,7 @@ export NSB_SCRIPT_DIR=$NSB_HOME/prm-scripts
 export NSB_SSH_CONFIG_DIR="/home/imre/code/nsb/prm-infrastructure/ssh_config"
 export PASSWORD_STORE_DIR=$NSB_HOME/.password-store-prm
 export KEYNAME="$(gpg -K --with-colons | grep ^sec | cut -d: -f5)"
-eval "$($NSB_HOME/prm-scripts/bin/nsb init -)"
+[ -f "$NSB_HOME/prm-scripts/bin/nsb" ] && eval "$($NSB_HOME/prm-scripts/bin/nsb init -)"
 
 function cdn() {
     cd ${NSB_HOME}/${1}
@@ -119,3 +119,7 @@ eval "$(rbenv init -)"
 
 alias cim="git commit -a -t <(git rev-parse --abbrev-ref HEAD | cut -d_ -f1 | sed 's/$/: /') && git push"
 alias ci="git commit -a -t <(git rev-parse --abbrev-ref HEAD | cut -d_ -f1 | sed 's/$/: /')"
+
+[ -d /usr/local/bin/aarch64-none-elf/bin ] && PATH="/usr/local/bin/aarch64-none-elf/bin:$PATH"
+
+[ -d "$HOME/.cargo/bin" ] && export PATH="$HOME/.cargo/bin:$PATH"
