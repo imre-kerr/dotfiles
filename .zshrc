@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws docker ubuntu kubectl kops)
+plugins=(git aws docker ubuntu kubectl kops vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,8 +114,12 @@ export GPG_TTY=$(tty)
 
 # added by travis gem
 [ -f /home/imre/.travis/travis.sh ] && source /home/imre/.travis/travis.sh
+PATH="$PATH:/home/imre/.conscript/bin"
 
 eval "$(rbenv init -)"
 
-alias cim="git commit -a -t <(git rev-parse --abbrev-ref HEAD | cut -d_ -f1 | sed 's/$/: /') && git push"
-alias ci="git commit -a -t <(git rev-parse --abbrev-ref HEAD | cut -d_ -f1 | sed 's/$/: /')"
+alias cim="git commit -a && git push"
+alias ci="git commit -a"
+
+export EDITOR=vi
+set editing-mode vi

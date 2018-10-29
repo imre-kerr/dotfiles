@@ -86,10 +86,6 @@ set nocompatible
     " Vim signs (:h signs) for modified lines based off VCS (e.g. Git)
     Plugin 'mhinz/vim-signify'
 
-    " Awesome syntax checker.
-    " REQUIREMENTS: See :h syntastic-intro
-    Plugin 'scrooloose/syntastic'
-
     " Functions, class data etc.
     " REQUIREMENTS: (exuberant)-ctags
     Plugin 'majutsushi/tagbar'
@@ -431,10 +427,6 @@ set nocompatible
 
         " Toggle pastemode, doesn't indent
         set pastetoggle=<F3>
-
-        " Syntastic - toggle error list. Probably should be toggleable.
-        noremap <silent><leader>lo :Errors<CR>
-        noremap <silent><leader>lc :lcl<CR>
     """ }}}
 """ }}}
 """ Plugin settings {{{
@@ -460,15 +452,6 @@ set nocompatible
     let g:tagbar_width = 30
     set tags=tags;/
 
-    " Syntastic - This is largely up to your own usage, and override these
-    "             changes if be needed. This is merely an exemplification.
-    let g:syntastic_cpp_check_header = 1
-    let g:syntastic_cpp_compiler_options = ' -std=c++0x'
-    let g:syntastic_mode_map = {
-        \ 'mode': 'passive',
-        \ 'active_filetypes':
-            \ ['c', 'cpp', 'perl', 'python', 'sh'] }
-
     " Netrw - the bundled (network) file and directory browser
     let g:netrw_banner = 0
     let g:netrw_list_hide = '^\.$'
@@ -493,7 +476,7 @@ set nocompatible
             \     'right': [
             \         ['lineinfo'],
             \         ['percent'],
-            \         ['fileformat', 'fileencoding', 'filetype', 'syntastic']
+            \         ['fileformat', 'fileencoding', 'filetype']
             \     ]
             \ },
             \ 'component': {
@@ -508,12 +491,6 @@ set nocompatible
             \     'fileformat'   : 'MyFileformat',
             \     'fileencoding' : 'MyFileencoding',
             \     'filetype'     : 'MyFiletype'
-            \ },
-            \ 'component_expand': {
-            \     'syntastic': 'SyntasticStatuslineFlag',
-            \ },
-            \ 'component_type': {
-            \     'syntastic': 'middle',
             \ },
             \ 'subseparator': {
             \     'left': '|', 'right': '|'
@@ -620,18 +597,6 @@ set nocompatible
             let g:lightline.fname = a:fname
             return lightline#statusline(0)
         endfunction
-
-        function! s:syntastic()
-            SyntasticCheck
-            call lightline#update()
-        endfunction
-
-        augroup AutoSyntastic
-            autocmd!
-            execute "autocmd FileType " .
-                        \join(g:syntastic_mode_map["active_filetypes"], ",") .
-                        \" autocmd BufWritePost <buffer> :call s:syntastic()"
-        augroup END
     """ }}}
 """ }}}
 """ Local ending config, will overwrite anything above. Generally use this. {{{{
