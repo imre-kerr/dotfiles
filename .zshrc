@@ -53,7 +53,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws docker ubuntu kubectl vi-mode)
+plugins=(git aws docker ubuntu vi-mode terraform)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,13 +115,13 @@ function cdn() {
 export GPG_TTY=$(tty)
 
 # added by travis gem
-[ -f /home/imre/.travis/travis.sh ] && source /home/imre/.travis/travis.sh
+# [ -f /home/imre/.travis/travis.sh ] && source /home/imre/.travis/travis.sh
 PATH="$PATH:/home/imre/.conscript/bin"
 
 export EDITOR=vi
 set editing-mode vi
-alias cim="git commit -a -t <(git rev-parse --abbrev-ref HEAD | cut -d_ -f1 | sed 's/$/: /') && git push"
-alias ci="git commit -a -t <(git rev-parse --abbrev-ref HEAD | cut -d_ -f1 | sed 's/$/: /')"
+alias cim="git commit -a -t <(git rev-parse --abbrev-ref HEAD | sed 's/_/ /g; s/ /: /') && gpsup"
+alias ci="git commit -a -t <(git rev-parse --abbrev-ref HEAD | sed 's/_.*$/: /') && git push"
 
 [ -d /usr/local/bin/aarch64-none-elf/bin ] && PATH="/usr/local/bin/aarch64-none-elf/bin:$PATH"
 
@@ -132,11 +132,7 @@ function loadnvm() {
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 }
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/imre/.nvm/versions/node/v11.6.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/imre/.nvm/versions/node/v11.6.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/imre/.nvm/versions/node/v11.6.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/imre/.nvm/versions/node/v11.6.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+# LSD
+alias ls="lsd"

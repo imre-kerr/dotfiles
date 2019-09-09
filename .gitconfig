@@ -1,0 +1,37 @@
+[user]
+	email = imre.kerr@gmail.com
+	name = Imre Kerr
+	signingkey = DB9BC9A4FBA6CEC1
+[alias]
+	co = checkout
+	b = branch
+	stat = status
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	d = difftool
+	nsbgrep = "!(for repo in $(ls $NSB_HOME); do (cd $NSB_HOME/$repo; git --no-pager grep $1 | sed \"s/^/$repo\\//\" | cut -c-$(tput cols)); done)"
+	gud = !cowsay \"GIT GUD\"
+[core]
+	editor = vim
+	excludesfile = /home/imre/.gitignore_global
+[commit]
+	gpgsign = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[diff "jupyternotebook"]
+	command = git-nbdiffdriver diff
+[merge "jupyternotebook"]
+	driver = git-nbmergedriver merge %O %A %B %L %P
+	name = jupyter notebook merge driver
+[difftool "nbdime"]
+	cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\" \"$BASE\"
+[mergetool "nbdime"]
+	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool]
+	prompt = false
